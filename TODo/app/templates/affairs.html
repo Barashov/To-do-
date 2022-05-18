@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% for object in data %}
+{{object.name}}
+{{object.description}}
+<br>
+{% endfor %}
+
+{% endblock content %}

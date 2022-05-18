@@ -21,3 +21,7 @@ class AddView(View):
             affair = Affairs(name=name, description=description, username=user)
             affair.save()
             return redirect('/')
+        
+def get_affairs(request):
+    data = Affairs.objects.filter(username=request.user)
+    return render(request, "affairs.html", {"data": data})
