@@ -25,3 +25,9 @@ class AddView(View):
 def get_affairs(request):
     data = Affairs.objects.filter(username=request.user)
     return render(request, "affairs.html", {"data": data})
+
+
+def delete(request, id):
+    affair = Affairs.objects.get(id=id)
+    affair.delete()
+    return redirect("affairs")
