@@ -1,9 +1,22 @@
 {% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'affairs.css' %}">
+{% endblock head %}
 
 {% block content %}
 {% for object in data %}
-{{object.name}}
-{{object.description}}
+<div class="affair">
+
+    <div>
+    <h3>{{object.name}}</h3>
+    <p>{{object.description}}</p>
+    </div>
+    <div class="button">
+    <button>Завершить</button>
+    </div>
+</div>
+
 <br>
 {% endfor %}
 

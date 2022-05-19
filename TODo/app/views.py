@@ -20,7 +20,7 @@ class AddView(View):
             user = request.user
             affair = Affairs(name=name, description=description, username=user)
             affair.save()
-            return redirect('/')
+            return redirect('affairs')
         
 def get_affairs(request):
     data = Affairs.objects.filter(username=request.user)

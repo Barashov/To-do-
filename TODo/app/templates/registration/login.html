@@ -1,13 +1,28 @@
 {% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'login.css' %}">
+{% endblock head %}
+
+
 
 
 {% block content %}
+
+<div class="form">
 <form method="post">
 {% csrf_token %}
-{{form.as_p}}
-<input type="submit" value="Log in">
-</form>
+{% for element in form  %}
+<h4>{{element.label_tag}}</h4>
+<br>
+<div class="field">{{element}}</div>
 
+<br>
+{% endfor %}
+
+<input class="button" type="submit" value="Войти">
+</form>
+</div>
 
 {% endblock content %}
 

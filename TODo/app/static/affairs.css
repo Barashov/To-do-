@@ -1,0 +1,26 @@
+.affair {
+    position: relative;
+    text-align: center;
+    margin-top: 10px;
+    height: 150px;
+    width: 400px;
+    background-color: #a495fc;
+    border-radius: 10px;
+    
+}
+
+.button {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+
+}
+.button button {
+    background-color: #fb984c;
+    height: 30px;
+    width: 95px;
+    border-radius: 10px
+}
+.button button:hover {
+    background-color: #ff7308;
+}

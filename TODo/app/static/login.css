@@ -1,0 +1,27 @@
+.form {
+    text-align: center;
+    text-size-adjust: 20px;
+    padding: none;
+}
+.form all{
+    background-color: aliceblue;
+}
+#id_username #id_password {
+    background-color: aliceblue;
+    height: 25px;
+    width: 120px;
+}
+.button {
+    margin-top: 20px;
+    height: 30px;
+    width: 150px;
+    border: 1px solid;
+    border-radius: 20px;
+}
+.field input {
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 25px;
+    width: 100px;
+    background-color: rgb(0, 81, 255);
+}
