@@ -1,4 +1,9 @@
 {% extends 'base.html' %}
+{% load static %}
+{% block head %}
+
+<link rel="stylesheet" href="{% static 'add.css' %}">
+{% endblock head %}
 
 
 {% block content %}
@@ -7,8 +12,17 @@
 
 <form method="post", action="{% url 'add' %}">
 {% csrf_token %}
-{{form}}
-<button type="submit">Добавить дело</button>
+{% for field in form  %}
+{{field.label_tag}}
+
+<br>
+<div class="form">
+{{field}}
+</div>
+<br>
+{% endfor %}
+
+<button class="button", type="submit">Добавить дело</button>
 
 </form>
 {% else %}

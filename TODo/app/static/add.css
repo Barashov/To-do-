@@ -1,0 +1,15 @@
+.form {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    
+}
+.form input {
+    height: 25px;
+    border-radius: 5px;
+}
+.button {
+    height: 35px;
+    width: 120px;
+    border-radius: 10px;
+    background-color: #fb894c;
+}
