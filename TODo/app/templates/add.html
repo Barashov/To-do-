@@ -2,12 +2,18 @@
 
 
 {% block content %}
+
+{% if user.is_authenticated %}
+
 <form method="post", action="{% url 'add' %}">
 {% csrf_token %}
 {{form}}
 <button type="submit">Добавить дело</button>
 
 </form>
+{% else %}
+<h3>Зарегестрируйтесь или войдите</h3>
+{% endif %}
 
 
 {% endblock content %}

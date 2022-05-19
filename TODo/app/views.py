@@ -10,8 +10,11 @@ def index(request):
 
 class AddView(View):
     def get(self, request):
-        form = AddForm(request.GET)
-        return render(request, 'add.html', {'form': form})
+        if request.user.is_authenticated:
+            form = AddForm(request.GET)
+            return render(request, 'add.html', {'form': form})
+        else:
+            return render(request, 'add.html')
     def post(self, request):
         form = AddForm(request.POST)
         if form.is_valid():
@@ -23,9 +26,11 @@ class AddView(View):
             return redirect('affairs')
         
 def get_affairs(request):
-    data = Affairs.objects.filter(username=request.user)
-    return render(request, "affairs.html", {"data": data})
-
+    if request.user.is_authenticated:
+        data = Affairs.objects.filter(username=request.user)
+        return render(request, "affairs.html", {"data": data})
+    else:
+        return render(request, "affairs.html")
 
 def delete(request, id):
     affair = Affairs.objects.get(id=id)

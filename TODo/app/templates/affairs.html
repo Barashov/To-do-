@@ -5,6 +5,9 @@
 {% endblock head %}
 
 {% block content %}
+
+{% if user.is_authenticated %}
+
 {% for object in data %}
 <div class="affair">
 
@@ -19,5 +22,7 @@
 
 <br>
 {% endfor %}
-
+{% else %}
+<h3>Зарегестрируйтесь или войдите</h3>
+{% endif %}
 {% endblock content %}
