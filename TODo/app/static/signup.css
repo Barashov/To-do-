@@ -1,9 +1,21 @@
 .reg {
-    background-color: #ffe7eb;
+    margin-top: 10px;
+    text-align: center;
+    width: 400px;
+    border-radius: 10px;
+    max-height: 800px;
+    background-color: #a495fc;
+    margin-left: 500px;
 }
 .but {
-    background-color: white;
+    margin-bottom: 10px;
+    height: 30px;
+    width: 160px;
+    border-radius: 10px;
+    background-color: #fb984c;
 }
-#id_username {
-    text-align: center;
+input {
+    height: 20px;
+    width: 150px;
+    border-radius: 5px;
 }

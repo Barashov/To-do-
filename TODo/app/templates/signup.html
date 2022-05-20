@@ -13,11 +13,21 @@
 <div class="reg">
 <form method="post">
     {% csrf_token %}
-    {{form.as_p}}
+
+{% for field in form  %}
+
+{{field.label_tag}}
+<br>
+{{field}}
+<br>
+{{field.errors}}
+<br>
+
+{% endfor %}
 
 
     
-    <input class="but" type="submit" value="sign up">
+    <input class="but" type="submit" value="Регистрация">
 </form>
 </div>
 {% endblock content %}
