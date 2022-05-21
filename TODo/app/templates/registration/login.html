@@ -12,14 +12,17 @@
 <div class="form">
 <form method="post">
 {% csrf_token %}
-{% for element in form  %}
-<h4>{{element.label_tag}}</h4>
+{{form.username.label_tag}}
 <br>
-<div class="field">{{element}}</div>
-
+{{form.username}}
 <br>
-{% endfor %}
-
+{{form.username.errors}}
+<br>
+{{form.password.label_tag}}
+<br>
+{{form.password}}
+<br>
+{{form.password.errors}}
 <input class="button" type="submit" value="Войти">
 </form>
 </div>
